@@ -88,28 +88,30 @@ Citizen.CreateThread(function()
                 end
                 setupScaleform("instructional_buttons")
             end
+				
+				DisableControls()
 
-			if IsControlPressed(0, config.controls.goForward) then
+			if IsDisabledControlPressed(0, config.controls.goForward) then
                 yoff = config.offsets.y
 			end
 			
-            if IsControlPressed(0, config.controls.goBackward) then
+            if IsDisabledControlPressed(0, config.controls.goBackward) then
                 yoff = -config.offsets.y
 			end
 			
-            if IsControlPressed(0, config.controls.turnLeft) then
+            if IsDisabledControlPressed(0, config.controls.turnLeft) then
                 SetEntityHeading(noclipEntity, GetEntityHeading(noclipEntity)+config.offsets.h)
 			end
 			
-            if IsControlPressed(0, config.controls.turnRight) then
+            if IsDisabledControlPressed(0, config.controls.turnRight) then
                 SetEntityHeading(noclipEntity, GetEntityHeading(noclipEntity)-config.offsets.h)
 			end
 			
-            if IsControlPressed(0, config.controls.goUp) then
+            if IsDisabledControlPressed(0, config.controls.goUp) then
                 zoff = config.offsets.z
 			end
 			
-            if IsControlPressed(0, config.controls.goDown) then
+            if IsDisabledControlPressed(0, config.controls.goDown) then
                 zoff = -config.offsets.z
 			end
 			
